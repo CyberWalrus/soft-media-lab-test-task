@@ -5,12 +5,10 @@
       "**/*.tsx",
       "**/*.ts",
       "**/*.js",
-      "next-env.d.ts"
    ],
     "excludes": [
       "node_modules",
       "dist",
-      ".next",
       "out"
     ]
 }
