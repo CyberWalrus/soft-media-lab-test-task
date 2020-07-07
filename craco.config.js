@@ -26,4 +26,13 @@ module.exports = {
       },
     },
   ],
+  jest: {
+    configure(config) {
+      config.roots = [
+          '<rootDir>/src',
+      ];
+      config.setupFilesAfterEnv = ['<rootDir>config/setup.js'];
+      return config;
+    },
+  },
 };
