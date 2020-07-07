@@ -1,0 +1,59 @@
+.popup {
+	inline-size: max-content;
+	block-size: max-content;
+	position: relative;
+
+	&__button {
+		inline-size: 2rem;
+		block-size: 2rem;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		border: 0.1rem solid var(--border-color, grey);
+		color: var(--border-color, grey);
+		font-size: 1.5rem;
+		border-radius: 50%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button-text {
+		inline-size: 100%;
+		block-size: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		position: absolute;
+		transform: translate3d(0%, 0%, 0);
+		background-color: var(--popup-bg-color, purple);
+		inline-size: 24rem;
+		transform: translate3d(1rem, 2.5rem, 0);
+		display: flex;
+
+		&::before {
+			position: absolute;
+			content: '';
+			inline-size: 0;
+			block-size: 0;
+			border: 1rem solid transparent;
+			border-bottom: 1rem solid var(--popup-bg-color, purple);
+			border-left: 1rem solid var(--popup-bg-color, purple);
+			transform: translate3d(0, -100%, 0);
+		}
+	}
+
+	&__content-text {
+		font-size: 1.5rem;
+		padding-inline-start: 1rem;
+		padding-inline-end: 1rem;
+		padding-block-start: 2rem;
+		padding-block-end: 2rem;
+		inline-size: 100%;
+		color: var(--text--dop--color, white);
+	}
+}
