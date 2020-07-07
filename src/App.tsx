@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './app.modules.scss';
 
 const App: FunctionComponent = () => {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

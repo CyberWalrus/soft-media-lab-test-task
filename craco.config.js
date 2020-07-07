@@ -26,17 +26,4 @@ module.exports = {
       },
     },
   ],
-  jest: {
-    configure(config) {
-      config.roots = [
-          '<rootDir>/src',
-          // '<rootDir>/__mocks__' <-- add this path for dependency mocks
-      ];
-      config.setupFilesAfterEnv = ['<rootDir>config/jest/setup.js'];
-      config.transformIgnorePatterns = [
-        "<rootDir>/node_modules/lightweight-charts.js",
-      ];
-      return config;
-    },
-  },
 };
