@@ -1,4 +1,5 @@
 import React, { useState, useCallback, FunctionComponent, ReactNode } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 import './popup.modules.scss';
 
 interface PopupProps {
@@ -8,16 +9,13 @@ interface PopupProps {
 const Popup: FunctionComponent<PopupProps> = ({ children }: PopupProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleChangeIsOpen = useCallback(
-    (value?: boolean) => {
-      if (value === undefined) {
-        setIsOpen(!isOpen);
-      } else {
-        setIsOpen(value);
-      }
-    },
-    [setIsOpen, isOpen]
-  );
+  const [handleMouseIsOpen, handleCancel] = useDebouncedCallback(() => {
+    setIsOpen(true);
+  }, 300);
+  const handleChangeIsOpen = useCallback(() => {
+    handleCancel();
+    setIsOpen(!isOpen);
+  }, [setIsOpen, isOpen, handleCancel]);
 
   return (
     <div className="popup">
@@ -25,7 +23,8 @@ const Popup: FunctionComponent<PopupProps> = ({ children }: PopupProps) => {
         className="popup__button"
         type="button"
         onClick={() => handleChangeIsOpen()}
-        onMouseEnter={() => handleChangeIsOpen(true)}
+        onMouseEnter={handleMouseIsOpen}
+        onMouseLeave={handleCancel}
       >
         <span className="popup__button-text">{isOpen ? 'x' : 'i'}</span>
       </button>
