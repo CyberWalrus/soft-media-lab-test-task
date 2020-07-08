@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoBox component should renders correctly 1`] = `"<div class=\\"info-box\\"><div><b class=\\"info-box__amount\\">0</b><span class=\\"info-box__text\\">₽ сотрудник будит получать на руки</span></div><div><b class=\\"info-box__amount\\">0</b><span class=\\"info-box__text\\">₽ НДФЛ, 13% от оклада</span></div><div><b class=\\"info-box__amount\\">0</b><span class=\\"info-box__text\\">₽ за сотрудника в месяц</span></div></div>"`;
