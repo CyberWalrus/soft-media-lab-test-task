@@ -34,11 +34,14 @@
       "version": "detect"
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
     },
     "import/resolver": {
       "typescript": {
-        "alwaysTryTypes": true 
+        "alwaysTryTypes": true
       }
     }
   },
@@ -50,6 +53,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/no-unresolved": "error",
+    "react/require-default-props": 0,
     "max-len": [
       "error",
       120,

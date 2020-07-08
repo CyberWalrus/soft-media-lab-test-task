@@ -1,5 +1,4 @@
 const path = require('path');
-const CracoAlias = require('craco-alias');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -16,16 +15,6 @@ module.exports = {
       ),
     ],
   },
-  plugins: [
-    {
-      plugin: CracoAlias,
-      options: {
-        aliases: {
-          '@': '/src',
-        },
-      },
-    },
-  ],
   jest: {
     configure(config) {
       config.roots = [
