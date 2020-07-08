@@ -5,11 +5,22 @@ html {
 
 :root {
   --border-color: grey;
-  --text--dop--color: white;
-  --popup-bg-color: purple;
+  --text-dop-color: white;
+  --text-title-color: gray;
+  --button-bg-color: white;
+  --popup-bg-color: rgb(97, 90, 163);
+  --info-bg-color: rgb(255, 245, 202);
+  --text-color: black;
+  --error-color: red;
+  --warn-color: orange;
+  --switcher-color: rgb(219, 219, 219);
+  --switcher-active-color: orange;
+  --text-normal: 1.3rem;
+  --text-large: 1.5rem;
 }
 
 body {
+  font-size: 1.2rem;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
