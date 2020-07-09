@@ -35,12 +35,12 @@ const Form: FunctionComponent<Props> = ({ handleSubmit, ndfl, typeSalary, salary
       <div className="form__title">Сумма</div>
       <div className="form__radio-box">
         <label className="form__radio-item">
-          <Field name="type" component="input" type="radio" value="month" />
+          <Field name="typeSalary" component="input" type="radio" value="month" />
           Оклад за месяц
         </label>
         <div className="form__radio-item">
           <label className="form__radio">
-            <Field name="type" component="input" type="radio" value="mrot" />
+            <Field name="typeSalary" component="input" type="radio" value="mrot" />
             МРОТ
           </label>
           <Popup>
@@ -51,11 +51,11 @@ const Form: FunctionComponent<Props> = ({ handleSubmit, ndfl, typeSalary, salary
           </Popup>
         </div>
         <label className="form__radio-item">
-          <Field name="type" component="input" type="radio" value="day" />
+          <Field name="typeSalary" component="input" type="radio" value="day" />
           Оплата за день
         </label>
         <label className="form__radio-item">
-          <Field name="type" component="input" type="radio" value="house" />
+          <Field name="typeSalary" component="input" type="radio" value="house" />
           Оплата за час
         </label>
       </div>
